@@ -13,7 +13,7 @@
 <h3 align="center">JBrada/LoginAsCustomerQuickLogin</h3>
 
   <p align="center">
-    Enhanced administration area in Magento by via Login as Customer's Quick Login in Customer grid.
+    <a href="https://docs.magento.com/user-guide/customers/login-as-customer.html" target="_blank">Login as Customer</a> made easy.
     <br />
     <br />
     <a href="https://github.com/jbrada/module-login-as-customer-quick-login/issues">Report Bug</a>
@@ -23,6 +23,14 @@
 </div>
 
 ## About The Project
+Do you use [Login as Customer](https://docs.magento.com/user-guide/customers/login-as-customer.html) a lot and often? This module makes it easy to log in from the Customer Grid in Admin Panel so that you don't have to click through to the customer details.
+
+
+### Features
+- Added filterable and sortable column "Login as Customer"
+- Possibility to login as a customer right away from the Customer grid
+
+[![ScreenShot][product-screenshot]](https://github.com/jbrada/module-login-as-customer-quick-login)
 
 ### Built For
 
@@ -78,4 +86,4 @@ Project Link: [https://github.com/jbrada/module-login-as-customer-quick-login](h
 [license-url]: https://github.com/jbrada/module-login-as-customer-quick-login/blob/main/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jbrada
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/login-as-customer-grid.png
