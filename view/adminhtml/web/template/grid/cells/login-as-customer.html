@@ -1,0 +1,11 @@
+<span
+    class="login-as-customer-disabled"
+    if="$col.isDisallowed($row())"
+    text="$col.getLabel($row())"></span>
+<span class="login-as-customer-enabled" if="$col.isAllowed($row())">
+    <a
+        href="#"
+        class="login-as-customer-enabled__link"
+        click="$col.handleClickOnLogin.bind($col, $row())"
+        text="$col.getLabel($row())"></a>
+</span>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/layout_generic.xsd">
+    <update handle="loginascustomer_confirmation_popup"/>
+
+    <referenceContainer name="content">
+        <block name="jbrada_login_as_customer_form_key" template="JBrada_LoginAsCustomerQuickLogin::form_key.phtml"/>
+    </referenceContainer>
+</layout>

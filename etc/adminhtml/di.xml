@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Customer\Model\ResourceModel\Grid\Collection">
+        <plugin name="jbrada_customer_resource_grid_collection_add_remote_assistance"
+                type="JBrada\LoginAsCustomerQuickLogin\Plugin\ResourceModel\Grid\Collection\AddRemoteAssistance"/>
+        <plugin name="jbrada_customer_resource_grid_collection_add_collection_filter_mapping"
+                type="JBrada\LoginAsCustomerQuickLogin\Plugin\ResourceModel\Grid\Collection\AddCollectionFilterMapping"
+        />
+    </type>
+    <type name="Magento\LoginAsCustomerApi\Api\ConfigInterface">
+        <plugin name="jbrada_login_as_customer_config_disable_on_customer_grid_if_choice"
+                type="JBrada\LoginAsCustomerQuickLogin\Plugin\Api\ConfigInterface\DisableOnCustomerGridIfChoice"/>
+    </type>
+</config>
