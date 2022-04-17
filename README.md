@@ -36,6 +36,12 @@ Do you use [Login as Customer](https://docs.magento.com/user-guide/customers/log
 
 * [Magento 2 - Open Source](https://magento.com/)
 
+### Limitations
+- Currently it is not possible to log in from the Customer Grid if Login as Customer is set to "Manual Selection"
+
+
+
+
 
 ## Installation
 
