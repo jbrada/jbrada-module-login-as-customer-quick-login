@@ -13,7 +13,7 @@
 <h3 align="center">JBrada/LoginAsCustomerQuickLogin</h3>
 
   <p align="center">
-    A simple module adds a navigation link between order, shipment, invoice and credit memo items and its related products.
+    Enhanced administration area in Magento by via Login as Customer's Quick Login in Customer grid.
     <br />
     <br />
     <a href="https://github.com/jbrada/module-login-as-customer-quick-login/issues">Report Bug</a>
@@ -23,11 +23,6 @@
 </div>
 
 ## About The Project
-
-[![ScreenShot][product-screenshot]](https://github.com/jbrada/module-login-as-customer-quick-login)
-
-Just a link between Order related entities and product :upside_down_face:
-
 
 ### Built For
 
