@@ -5,14 +5,13 @@ declare(strict_types=1);
 namespace JBrada\LoginAsCustomerQuickLogin\Ui\Component\Listing\Column;
 
 use JBrada\LoginAsCustomerQuickLogin\Ui\Component\Listing\Column\LoginAsCustomer\Options;
+use Magento\Framework\AuthorizationInterface;
+use Magento\Framework\Escaper;
+use Magento\Framework\UrlInterface;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
-use Magento\Ui\Component\Listing\Columns\Column;
-use Magento\Framework\UrlInterface;
-use Magento\LoginAsCustomerAdminUi\Ui\Customer\Component\Button\DataProvider;
-use Magento\Framework\Escaper;
 use Magento\LoginAsCustomerApi\Api\ConfigInterface;
-use Magento\Framework\AuthorizationInterface;
+use Magento\Ui\Component\Listing\Columns\Column;
 
 class LoginAsCustomer extends Column
 {

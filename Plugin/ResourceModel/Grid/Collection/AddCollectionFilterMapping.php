@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace JBrada\LoginAsCustomerQuickLogin\Plugin\ResourceModel\Grid\Collection;
 
-use JBrada\LoginAsCustomerQuickLogin\Ui\Component\Listing\Column\LoginAsCustomer\Options;
 use Magento\Customer\Model\ResourceModel\Grid\Collection;
 
 class AddCollectionFilterMapping
