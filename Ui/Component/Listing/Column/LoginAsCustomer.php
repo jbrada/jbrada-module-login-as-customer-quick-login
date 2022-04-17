@@ -12,6 +12,7 @@ use Magento\Framework\UrlInterface;
 use Magento\LoginAsCustomerAdminUi\Ui\Customer\Component\Button\DataProvider;
 use Magento\Framework\Escaper;
 use Magento\LoginAsCustomerApi\Api\ConfigInterface;
+use Magento\Framework\AuthorizationInterface;
 
 class LoginAsCustomer extends Column
 {
@@ -31,11 +32,17 @@ class LoginAsCustomer extends Column
     private ConfigInterface $config;
 
     /**
+     * @var AuthorizationInterface
+     */
+    private AuthorizationInterface $authorization;
+
+    /**
      * @param ContextInterface $context
      * @param UiComponentFactory $uiComponentFactory
      * @param Escaper $escaper
      * @param UrlInterface $urlBuilder
      * @param ConfigInterface $config
+     * @param AuthorizationInterface $authorization
      * @param array $components
      * @param array $data
      */
@@ -45,6 +52,7 @@ class LoginAsCustomer extends Column
         Escaper $escaper,
         UrlInterface $urlBuilder,
         ConfigInterface $config,
+        AuthorizationInterface $authorization,
         array              $components = [],
         array              $data = []
     ) {
@@ -53,6 +61,7 @@ class LoginAsCustomer extends Column
         $this->escaper = $escaper;
         $this->urlBuilder = $urlBuilder;
         $this->config = $config;
+        $this->authorization = $authorization;
     }
 
     /**
@@ -69,7 +78,10 @@ class LoginAsCustomer extends Column
 
         foreach ($dataSource['data']['items'] as &$item) {
             $allowed = (int) $item[$this->getData('name')];
-            if ($allowed === Options::DISALLOWED || $this->config->isStoreManualChoiceEnabled() === true) {
+            if ($allowed === Options::DISALLOWED ||
+                $this->config->isStoreManualChoiceEnabled() === true ||
+                $this->authorization->isAllowed('Magento_LoginAsCustomer::login') === false
+            ) {
 
                 $label = $allowed ?  __('Allowed') :  __('Disallowed');
 
