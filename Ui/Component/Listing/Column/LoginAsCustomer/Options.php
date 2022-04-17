@@ -23,7 +23,7 @@ class Options implements OptionSourceInterface
         return [
             [
                 'value' => self::DISALLOWED,
-                'label' => __('Disllowed')
+                'label' => __('Disallowed')
             ], [
                 'value' => self::ALLOWED,
                 'label' => __('Allowed')
